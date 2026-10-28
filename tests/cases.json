@@ -9,14 +9,20 @@
         "echo hi; git push origin master",
         "git push origin main;",
         "git push origin main | cat",
-        "cd x && git push origin production"
+        "cd x && git push origin production",
+        "git push -o 'a;b' origin main",
+        "git push -o \"x&y\" origin main",
+        "git push 2>&1 origin main",
+        "git push origin main &>/dev/null",
+        "bash -c \"git push origin main\""
       ],
       "must_not_block": [
         "git push -u origin feat/x && gh pr create --base main",
         "git push origin feat && git checkout main",
         "git push origin fix/main-menu",
         "git push origin feat; echo main",
-        "git push origin my-main"
+        "git push origin my-main",
+        "git push origin 'feat' && echo main"
       ]
     },
     "Require access request for force-push to main or master": {
@@ -37,6 +43,8 @@
         "git push --force origin feat",
         "git push -f",
         "git push origin feat --force-with-lease",
+        "git push 2>&1 --force origin x",
+        "git push -o 'a;b' --force origin x",
         "echo x && git push -f origin feat"
       ],
       "must_not_block": [

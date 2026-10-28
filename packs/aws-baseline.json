@@ -30,7 +30,7 @@
       "rule_config": {
         "blocked_patterns": [
           "aws\\s+s3\\s+rb\\b",
-          "aws\\s+s3\\s+rm\\b[^;&|\\n]*--recursive"
+          "aws\\s+s3\\s+rm\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--recursive"
         ]
       },
       "events": ["pre_tool_use"],
@@ -101,7 +101,7 @@
       "priority": 300,
       "rule_type": "command_filter",
       "rule_config": {
-        "blocked_patterns": ["aws\\b[^;&|\\n]*--profile\\s+\\S*prod"]
+        "blocked_patterns": ["aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--profile\\s+\\S*prod"]
       },
       "events": ["pre_tool_use"],
       "tools": ["Bash"]

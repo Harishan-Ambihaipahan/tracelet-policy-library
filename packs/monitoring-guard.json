@@ -35,7 +35,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.pagerduty\\.com[^\\s]*?/services/[^\\s]+|[^;&|\\n]*api\\.pagerduty\\.com[^\\s]*?/services/[^\\s]+[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.pagerduty\\.com[^\\s]*?/services/[^\\s]+|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.pagerduty\\.com[^\\s]*?/services/[^\\s]+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -75,7 +75,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))POST\\b[^;&|\\n]*\\/api\\/v1\\/admin\\/tsdb\\/delete_series\\b|[^;&|\\n]*\\/api\\/v1\\/admin\\/tsdb\\/delete_series\\b[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))POST\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))POST\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/v1\\/admin\\/tsdb\\/delete_series\\b|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/v1\\/admin\\/tsdb\\/delete_series\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))POST\\b)"
         ]
       },
       "events": [
@@ -95,7 +95,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "splunk\\b[^;&|\\n]*?\\bremove\\s+index\\b"
+          "splunk\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bremove\\s+index\\b"
         ]
       },
       "events": [
@@ -115,7 +115,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "splunk\\b[^;&|\\n]*?\\bclean\\s+eventdata\\b"
+          "splunk\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bclean\\s+eventdata\\b"
         ]
       },
       "events": [
@@ -135,7 +135,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "datadog-ci\\b[^;&|\\n]*?\\bmonitors\\s+delete\\b"
+          "datadog-ci\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bmonitors\\s+delete\\b"
         ]
       },
       "events": [
@@ -155,7 +155,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "datadog-ci\\b[^;&|\\n]*?\\bdashboards\\s+delete\\b"
+          "datadog-ci\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bdashboards\\s+delete\\b"
         ]
       },
       "events": [
@@ -175,7 +175,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.datadoghq\\.com[^;&|\\n]*\\/(?:monitor|dashboard|synthetics)\\/|[^;&|\\n]*api\\.datadoghq\\.com[^;&|\\n]*\\/(?:monitor|dashboard|synthetics)\\/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.datadoghq\\.com(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/(?:monitor|dashboard|synthetics)\\/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.datadoghq\\.com(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/(?:monitor|dashboard|synthetics)\\/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -195,7 +195,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "terraform\\b[^;&|\\n]*?\\bdestroy\\b[^;&|\\n]*\\bdatadog_[a-zA-Z0-9_]+\\b"
+          "terraform\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bdestroy\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bdatadog_[a-zA-Z0-9_]+\\b"
         ]
       },
       "events": [
@@ -295,7 +295,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.pagerduty\\.com[^\\s]*?/schedules/[^\\s]+|[^;&|\\n]*api\\.pagerduty\\.com[^\\s]*?/schedules/[^\\s]+[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.pagerduty\\.com[^\\s]*?/schedules/[^\\s]+|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.pagerduty\\.com[^\\s]*?/schedules/[^\\s]+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -355,7 +355,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*\\/api\\/dashboards\\/|[^;&|\\n]*\\/api\\/dashboards\\/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/dashboards\\/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/dashboards\\/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -375,7 +375,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*\\/api\\/datasources\\/|[^;&|\\n]*\\/api\\/datasources\\/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/datasources\\/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/datasources\\/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -395,7 +395,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*\\/api\\/alert-notifications\\/|[^;&|\\n]*\\/api\\/alert-notifications\\/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/alert-notifications\\/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/api\\/alert-notifications\\/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -495,7 +495,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.newrelic\\.com|[^;&|\\n]*api\\.newrelic\\.com[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -515,7 +515,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*api\\.newrelic\\.com[^\\s]*?/graphql\\b[^;&|\\n]*\\bmutation\\b[^;&|\\n]*\\bdelete\\w*\\b|[^;&|\\n]*api\\.newrelic\\.com[^\\s]*?/graphql\\b[^;&|\\n]*\\bdelete\\w*\\b[^;&|\\n]*\\bmutation\\b|[^;&|\\n]*\\bmutation\\b[^;&|\\n]*api\\.newrelic\\.com[^\\s]*?/graphql\\b[^;&|\\n]*\\bdelete\\w*\\b|[^;&|\\n]*\\bmutation\\b[^;&|\\n]*\\bdelete\\w*\\b[^;&|\\n]*api\\.newrelic\\.com[^\\s]*?/graphql\\b|[^;&|\\n]*\\bdelete\\w*\\b[^;&|\\n]*api\\.newrelic\\.com[^\\s]*?/graphql\\b[^;&|\\n]*\\bmutation\\b|[^;&|\\n]*\\bdelete\\w*\\b[^;&|\\n]*\\bmutation\\b[^;&|\\n]*api\\.newrelic\\.com[^\\s]*?/graphql\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com[^\\s]*?/graphql\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bmutation\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bdelete\\w*\\b|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com[^\\s]*?/graphql\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bdelete\\w*\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bmutation\\b|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bmutation\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com[^\\s]*?/graphql\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bdelete\\w*\\b|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bmutation\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bdelete\\w*\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com[^\\s]*?/graphql\\b|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bdelete\\w*\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com[^\\s]*?/graphql\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bmutation\\b|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bdelete\\w*\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bmutation\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.newrelic\\.com[^\\s]*?/graphql\\b)"
         ]
       },
       "events": [
@@ -535,7 +535,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "splunk\\b[^;&|\\n]*?\\bdelete\\s+(?:user|role)\\b"
+          "splunk\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bdelete\\s+(?:user|role)\\b"
         ]
       },
       "events": [
@@ -555,7 +555,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)curl\\s+[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*splunk[^;&|\\n]*\\/services\\/"
+          "(?i)curl\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*splunk(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\/services\\/"
         ]
       },
       "events": [

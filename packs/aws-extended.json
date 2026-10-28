@@ -15,7 +15,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bec2\\s+terminate-instances"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bec2\\s+terminate-instances"
         ]
       },
       "events": [
@@ -35,7 +35,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bs3\\s+rm\\s+[^;&|\\n]*--recursive"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bs3\\s+rm\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--recursive"
         ]
       },
       "events": [
@@ -55,7 +55,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bs3\\s+rb\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bs3\\s+rb\\b"
         ]
       },
       "events": [
@@ -75,7 +75,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bs3api\\s+delete-bucket"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bs3api\\s+delete-bucket"
         ]
       },
       "events": [
@@ -95,7 +95,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\brds\\s+delete-"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brds\\s+delete-"
         ]
       },
       "events": [
@@ -115,7 +115,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bcloudformation\\s+delete-stack"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bcloudformation\\s+delete-stack"
         ]
       },
       "events": [
@@ -135,7 +135,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bdynamodb\\s+delete-table"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bdynamodb\\s+delete-table"
         ]
       },
       "events": [
@@ -155,7 +155,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\beks\\s+delete-cluster"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\beks\\s+delete-cluster"
         ]
       },
       "events": [
@@ -175,7 +175,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bkms\\s+schedule-key-deletion"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bkms\\s+schedule-key-deletion"
         ]
       },
       "events": [
@@ -195,7 +195,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bsecretsmanager\\s+delete-secret"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bsecretsmanager\\s+delete-secret"
         ]
       },
       "events": [
@@ -215,7 +215,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bec2\\s+delete-"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bec2\\s+delete-"
         ]
       },
       "events": [
@@ -235,7 +235,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\broute53\\s+delete-hosted-zone"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\broute53\\s+delete-hosted-zone"
         ]
       },
       "events": [
@@ -255,7 +255,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\blambda\\s+delete-"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\blambda\\s+delete-"
         ]
       },
       "events": [
@@ -275,7 +275,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bcloudtrail\\s+delete-trail"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bcloudtrail\\s+delete-trail"
         ]
       },
       "events": [
@@ -295,7 +295,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\biam\\s+delete-"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\biam\\s+delete-"
         ]
       },
       "events": [
@@ -315,7 +315,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bredshift\\s+delete-cluster"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bredshift\\s+delete-cluster"
         ]
       },
       "events": [
@@ -335,7 +335,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\becr\\s+delete-repository"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\becr\\s+delete-repository"
         ]
       },
       "events": [
@@ -355,7 +355,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bkinesis\\s+delete-stream"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bkinesis\\s+delete-stream"
         ]
       },
       "events": [
@@ -375,7 +375,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\becr\\s+batch-delete-image"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\becr\\s+batch-delete-image"
         ]
       },
       "events": [
@@ -395,7 +395,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\befs\\s+delete-file-system"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\befs\\s+delete-file-system"
         ]
       },
       "events": [
@@ -415,7 +415,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\blogs\\s+delete-log-group"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\blogs\\s+delete-log-group"
         ]
       },
       "events": [
@@ -435,7 +435,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bathena\\s+delete-data-catalog\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+delete-data-catalog\\b"
         ]
       },
       "events": [
@@ -455,7 +455,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\blogs\\s+delete-log-stream"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\blogs\\s+delete-log-stream"
         ]
       },
       "events": [
@@ -475,7 +475,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?is)aws\\b[^;&|\\n]*?\\bathena\\s+start-query-execution\\b[^;&|\\n]*\\bDROP\\s+(?:DATABASE|SCHEMA)\\b"
+          "(?is)aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+start-query-execution\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bDROP\\s+(?:DATABASE|SCHEMA)\\b"
         ]
       },
       "events": [
@@ -495,7 +495,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bs3api\\s+delete-object"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bs3api\\s+delete-object"
         ]
       },
       "events": [
@@ -515,7 +515,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?is)aws\\b[^;&|\\n]*?\\bathena\\s+start-query-execution\\b[^;&|\\n]*\\bTRUNCATE\\s+TABLE\\b"
+          "(?is)aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+start-query-execution\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bTRUNCATE\\s+TABLE\\b"
         ]
       },
       "events": [
@@ -535,7 +535,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bathena\\s+delete-work-group\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+delete-work-group\\b"
         ]
       },
       "events": [
@@ -555,7 +555,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?is)aws\\b[^;&|\\n]*?\\bathena\\s+start-query-execution\\b[^;&|\\n]*\\bDELETE\\s+FROM\\s+\\S+"
+          "(?is)aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+start-query-execution\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bDELETE\\s+FROM\\s+\\S+"
         ]
       },
       "events": [
@@ -575,7 +575,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?is)aws\\b[^;&|\\n]*?\\bathena\\s+start-query-execution\\b[^;&|\\n]*\\bDROP\\s+(?:TABLE|VIEW|EXTERNAL\\s+TABLE)\\b"
+          "(?is)aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+start-query-execution\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\bDROP\\s+(?:TABLE|VIEW|EXTERNAL\\s+TABLE)\\b"
         ]
       },
       "events": [
@@ -595,7 +595,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+delete-database\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+delete-database\\b"
         ]
       },
       "events": [
@@ -615,7 +615,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\becr\\s+delete-lifecycle-policy"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\becr\\s+delete-lifecycle-policy"
         ]
       },
       "events": [
@@ -635,7 +635,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)aws\\b[^;&|\\n]*?\\bathena\\s+start-query-execution\\b[^;&|\\n]*--query-string[=\\s]+['\"]?\\s*(?:file|fileb)://"
+          "(?i)aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+start-query-execution\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--query-string[=\\s]+['\"]?\\s*(?:file|fileb)://"
         ]
       },
       "events": [
@@ -655,7 +655,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+batch-delete-table\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+batch-delete-table\\b"
         ]
       },
       "events": [
@@ -675,7 +675,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bathena\\s+delete-named-query\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+delete-named-query\\b"
         ]
       },
       "events": [
@@ -695,7 +695,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)aws\\b[^;&|\\n]*?\\bathena\\s+start-query-execution\\b[^;&|\\n]*--cli-input-(?:json|yaml)[=\\s]+['\"]?\\s*(?:file|fileb)://"
+          "(?i)aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bathena\\s+start-query-execution\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--cli-input-(?:json|yaml)[=\\s]+['\"]?\\s*(?:file|fileb)://"
         ]
       },
       "events": [
@@ -715,7 +715,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+delete-table\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+delete-table\\b"
         ]
       },
       "events": [
@@ -735,7 +735,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+delete-crawler\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+delete-crawler\\b"
         ]
       },
       "events": [
@@ -755,7 +755,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+delete-partition\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+delete-partition\\b"
         ]
       },
       "events": [
@@ -775,7 +775,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+delete-dev-endpoint\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+delete-dev-endpoint\\b"
         ]
       },
       "events": [
@@ -795,7 +795,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+batch-delete-partition\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+batch-delete-partition\\b"
         ]
       },
       "events": [
@@ -815,7 +815,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\bglue\\s+delete-job\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bglue\\s+delete-job\\b"
         ]
       },
       "events": [
@@ -835,7 +835,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\blambda\\s+put-function-concurrency\\b[^;&|\\n]*--reserved-concurrent-executions[=\\s]+0\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\blambda\\s+put-function-concurrency\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--reserved-concurrent-executions[=\\s]+0\\b"
         ]
       },
       "events": [
@@ -855,7 +855,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\blambda\\s+update-function-configuration\\b[^;&|\\n]*--environment\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\blambda\\s+update-function-configuration\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--environment\\b"
         ]
       },
       "events": [
@@ -875,7 +875,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\blambda\\s+create-function-url-config\\b[^;&|\\n]*--auth-type[=\\s]+NONE\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\blambda\\s+create-function-url-config\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--auth-type[=\\s]+NONE\\b"
         ]
       },
       "events": [
@@ -895,7 +895,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\biam\\s+update-assume-role-policy\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\biam\\s+update-assume-role-policy\\b"
         ]
       },
       "events": [
@@ -915,7 +915,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\brds\\s+modify-db-snapshot-attribute\\b[^;&|\\n]*--values-to-add[=\\s]+all\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brds\\s+modify-db-snapshot-attribute\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--values-to-add[=\\s]+all\\b"
         ]
       },
       "events": [
@@ -935,7 +935,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\brds\\s+modify-db-instance\\b[^;&|\\n]*--apply-immediately\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brds\\s+modify-db-instance\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--apply-immediately\\b"
         ]
       },
       "events": [
@@ -955,7 +955,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\brds\\s+promote-read-replica\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brds\\s+promote-read-replica\\b"
         ]
       },
       "events": [
@@ -975,7 +975,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\brds\\s+stop-db-instance\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brds\\s+stop-db-instance\\b"
         ]
       },
       "events": [
@@ -995,7 +995,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "aws\\b[^;&|\\n]*?\\brds\\s+reboot-db-instance\\b"
+          "aws\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brds\\s+reboot-db-instance\\b"
         ]
       },
       "events": [

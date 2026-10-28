@@ -224,7 +224,13 @@ one command. A bare `.*` therefore runs across `&&`, `;` and `||` into the next
 chained command. For example, `git\s+push\b.*\bmain\b` blocks
 `git push origin feat && gh pr create --base main`, which never pushes to main.
 
-- Use `[^;&|\n]*` instead of `.*` so the match stays inside one command.
+- Instead of `.*`, use the "one command" token
+  `(?:[^;&|\n]|'[^']*'|"[^"]*"|[0-9]*[<>]&[0-9-]*|&>)*`. It stops at
+  `;`, `&&`, `||` and newlines, but steps over a quoted `;` or `&`
+  (`git push -o 'a;b' origin main`) and redirects like `2>&1`, and it can
+  still match text inside quotes (`psql -c "DROP TABLE x"`).
+  A plain `[^;&|\n]*` is simpler but misses those quoted and redirect
+  shapes, so a real push to main could slip through.
 - A pattern that is meant to span a pipe (`curl … | sh`) uses `[^;\n]*` around
   the `\|`, so redirects like `2>&1` still match.
 - End a branch-name match with `(?:$|[\s:;&|])`, so `git push origin main;`

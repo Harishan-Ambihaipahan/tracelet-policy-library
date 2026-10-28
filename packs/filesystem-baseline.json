@@ -55,7 +55,7 @@
       "priority": 120,
       "rule_type": "command_filter",
       "rule_config": {
-        "blocked_patterns": ["dd\\b[^;&|\\n]*of=/dev/"]
+        "blocked_patterns": ["dd\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*of=/dev/"]
       },
       "events": ["pre_tool_use"],
       "tools": ["Bash"]

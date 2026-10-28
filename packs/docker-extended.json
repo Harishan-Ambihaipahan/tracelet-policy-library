@@ -15,7 +15,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?:docker-compose|docker\\s+compose)\\s+down\\s+[^;&|\\n]*(?:-v\\b|--volumes)"
+          "(?:docker-compose|docker\\s+compose)\\s+down\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-v\\b|--volumes)"
         ]
       },
       "events": [
@@ -35,7 +35,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\bvolume\\s+prune"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bvolume\\s+prune"
         ]
       },
       "events": [
@@ -55,7 +55,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\bsystem\\s+prune"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bsystem\\s+prune"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -78,7 +78,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\bvolume\\s+prune"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bvolume\\s+prune"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -101,7 +101,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\bnetwork\\s+prune"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bnetwork\\s+prune"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -124,7 +124,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\brm\\s+[^;&|\\n]*(?:-[a-zA-Z0-9]*f|--force)"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brm\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-[a-zA-Z0-9]*f|--force)"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -147,7 +147,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\brmi\\s+[^;&|\\n]*(?:-[a-zA-Z0-9]*f|--force)"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brmi\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-[a-zA-Z0-9]*f|--force)"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -170,7 +170,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\bvolume\\s+rm"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bvolume\\s+rm"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -193,7 +193,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\b(?:stop|kill)\\s+\\$\\("
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\b(?:stop|kill)\\s+\\$\\("
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -216,7 +216,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?:docker-compose|docker\\s+compose)\\s+down\\s+[^;&|\\n]*--rmi\\s+all"
+          "(?:docker-compose|docker\\s+compose)\\s+down\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--rmi\\s+all"
         ]
       },
       "events": [
@@ -236,7 +236,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?:docker-compose|docker\\s+compose)\\s+rm\\s+[^;&|\\n]*(?:-v\\b|--volumes)"
+          "(?:docker-compose|docker\\s+compose)\\s+rm\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-v\\b|--volumes)"
         ]
       },
       "events": [
@@ -256,7 +256,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\bsystem\\s+prune"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bsystem\\s+prune"
         ]
       },
       "events": [
@@ -276,7 +276,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\bimage\\s+prune"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bimage\\s+prune"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -299,7 +299,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\brm\\s+[^;&|\\n]*(?:-[a-zA-Z0-9]*f|--force)"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brm\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-[a-zA-Z0-9]*f|--force)"
         ]
       },
       "events": [
@@ -319,7 +319,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "docker\\b[^;&|\\n]*?\\bcontainer\\s+prune"
+          "docker\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bcontainer\\s+prune"
         ],
         "allowed_patterns": [
           "(?:^\\s*docker\\b(?:\\s+[^;&|`$()]*)*--dry-run(?:\\s+[^;&|`$()]*)*$)"
@@ -342,7 +342,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\brmi\\s+[^;&|\\n]*(?:-[a-zA-Z0-9]*f|--force)"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\brmi\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-[a-zA-Z0-9]*f|--force)"
         ]
       },
       "events": [
@@ -362,7 +362,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?:docker-compose|docker\\s+compose)\\s+rm\\s+[^;&|\\n]*(?:-f\\b|--force)"
+          "(?:docker-compose|docker\\s+compose)\\s+rm\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-f\\b|--force)"
         ]
       },
       "events": [
@@ -382,7 +382,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\bvolume\\s+rm"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bvolume\\s+rm"
         ]
       },
       "events": [
@@ -402,7 +402,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\bpod\\s+prune"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bpod\\s+prune"
         ]
       },
       "events": [
@@ -422,7 +422,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\bimage\\s+prune"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bimage\\s+prune"
         ]
       },
       "events": [
@@ -442,7 +442,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "podman\\b[^;&|\\n]*?\\bcontainer\\s+prune"
+          "podman\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?\\bcontainer\\s+prune"
         ]
       },
       "events": [

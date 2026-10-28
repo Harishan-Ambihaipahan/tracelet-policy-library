@@ -75,7 +75,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*app\\.launchdarkly\\.com/api/[^;&|\\n]*/environments/|[^;&|\\n]*app\\.launchdarkly\\.com/api/[^;&|\\n]*/environments/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/environments/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/environments/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -95,7 +95,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*app\\.launchdarkly\\.com/api/[^;&|\\n]*/flags/|[^;&|\\n]*app\\.launchdarkly\\.com/api/[^;&|\\n]*/flags/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/flags/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/flags/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -115,7 +115,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*app\\.launchdarkly\\.com/api/v2/projects/[^/\\s]+(?:\\s|$)|[^;&|\\n]*app\\.launchdarkly\\.com/api/v2/projects/[^/\\s]+(?:\\s|$)[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/v2/projects/[^/\\s]+(?:\\s|$)|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/v2/projects/[^/\\s]+(?:\\s|$)(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -235,7 +235,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.split\\.io/[^;&|\\n]*/splits/|[^;&|\\n]*api\\.split\\.io/[^;&|\\n]*/splits/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/splits/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/splits/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -275,7 +275,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.split\\.io/[^;&|\\n]*/environments/|[^;&|\\n]*api\\.split\\.io/[^;&|\\n]*/environments/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/environments/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/environments/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -335,7 +335,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*app\\.launchdarkly\\.com/api/[^;&|\\n]*/segments/|[^;&|\\n]*app\\.launchdarkly\\.com/api/[^;&|\\n]*/segments/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/segments/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/segments/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -375,7 +375,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*app\\.launchdarkly\\.com/api/|[^;&|\\n]*app\\.launchdarkly\\.com/api/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*app\\.launchdarkly\\.com/api/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -495,7 +495,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.split\\.io/[^;&|\\n]*/segments/|[^;&|\\n]*api\\.split\\.io/[^;&|\\n]*/segments/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/segments/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/segments/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -515,7 +515,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*?/api/admin/projects/[^;&|\\n]*/features/|[^;&|\\n]*?/api/admin/projects/[^;&|\\n]*/features/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?/api/admin/projects/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/features/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?/api/admin/projects/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*/features/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -535,7 +535,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*api\\.split\\.io|[^;&|\\n]*api\\.split\\.io[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*api\\.split\\.io(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -555,7 +555,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*?/api/admin/projects/[^/\\s]+(?:\\s|$)|[^;&|\\n]*?/api/admin/projects/[^/\\s]+(?:\\s|$)[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?/api/admin/projects/[^/\\s]+(?:\\s|$)|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?/api/admin/projects/[^/\\s]+(?:\\s|$)(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [
@@ -675,7 +675,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "curl\\s+[^;&|\\n]*(?:-X\\s*DELETE|--request(?:=|\\s+)DELETE)\\s+[^;&|\\n]*?/api/v1/"
+          "curl\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*DELETE|--request(?:=|\\s+)DELETE)\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?/api/v1/"
         ]
       },
       "events": [
@@ -755,7 +755,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)\\bcurl\\b(?:[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b[^;&|\\n]*?/api/admin/|[^;&|\\n]*?/api/admin/[^;&|\\n]*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
+          "(?i)\\bcurl\\b(?:(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?/api/admin/|(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*?/api/admin/(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--request(?:=|\\s+))DELETE\\b)"
         ]
       },
       "events": [

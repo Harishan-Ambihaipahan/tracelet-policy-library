@@ -95,7 +95,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b[^;&|\\n]*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b[^;&|\\n]*(?:/)?projects/[^/\\s]+(?:\\s|$)"
+          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:/)?projects/[^/\\s]+(?:\\s|$)"
         ]
       },
       "events": [
@@ -115,7 +115,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b[^;&|\\n]*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b[^;&|\\n]*(?:/)?projects/[^/\\s]+/releases/"
+          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:/)?projects/[^/\\s]+/releases/"
         ]
       },
       "events": [
@@ -135,7 +135,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b[^;&|\\n]*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b[^;&|\\n]*(?:/)?projects/[^/\\s]+/variables/"
+          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:/)?projects/[^/\\s]+/variables/"
         ]
       },
       "events": [
@@ -155,7 +155,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b[^;&|\\n]*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b[^;&|\\n]*(?:/)?protected_branches/"
+          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:/)?protected_branches/"
         ]
       },
       "events": [
@@ -175,7 +175,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b[^;&|\\n]*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b[^;&|\\n]*(?:/)?hooks/"
+          "glab(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+api\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:-X\\s*|--method(?:=|\\s+))DELETE\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*(?:/)?hooks/"
         ]
       },
       "events": [
@@ -195,7 +195,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "gitlab-rails\\s+runner\\b[^;&|\\n]*\\b(?:destroy_all|delete_all|\\.destroy\\b|\\.delete\\b|truncate|drop)\\b"
+          "gitlab-rails\\s+runner\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\b(?:destroy_all|delete_all|\\.destroy\\b|\\.delete\\b|truncate|drop)\\b"
         ]
       },
       "events": [
@@ -215,7 +215,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "gitlab-rake\\b[^;&|\\n]*\\b(?:gitlab:)?backup:restore\\b|gitlab-rake\\b[^;&|\\n]*\\b(?:gitlab:)?db:(?:drop|reset)\\b"
+          "gitlab-rake\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\b(?:gitlab:)?backup:restore\\b|gitlab-rake\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\b(?:gitlab:)?db:(?:drop|reset)\\b"
         ]
       },
       "events": [

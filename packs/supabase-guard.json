@@ -135,7 +135,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "(?i)supabase(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+db\\s+shell\\s+[^;&|\\n]*\\b(DROP|TRUNCATE|DELETE|ALTER)\\b"
+          "(?i)supabase(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+db\\s+shell\\s+(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*\\b(DROP|TRUNCATE|DELETE|ALTER)\\b"
         ]
       },
       "events": [
@@ -355,7 +355,7 @@
       "rule_type": "command_filter",
       "rule_config": {
         "blocked_patterns": [
-          "supabase(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+stop\\b[^;&|\\n]*--no-backup"
+          "supabase(?:\\s+--?\\S+(?:\\s+\\S+)?)*\\s+stop\\b(?:[^;&|\\n]|'[^']*'|\"[^\"]*\"|[0-9]*[<>]&[0-9-]*|&>)*--no-backup"
         ]
       },
       "events": [
